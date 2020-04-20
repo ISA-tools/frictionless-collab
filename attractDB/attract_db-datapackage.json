@@ -1,0 +1,180 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "attract_db",
+      "path": "ATtRACT_db.txt",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Gene_name",
+            "type": "string",
+            "format": "default",
+            "title": "gene name",
+            "description": "the HUGO name for a gene",
+            "rdfType": "http://edamontology.org/data_2299",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Gene_id",
+            "type": "string",
+            "format": "default",
+            "title": "gene identifier",
+            "description": "an database identifier for this particular gene",
+                        "rdfType": "http://edamontology.org/data_1025",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Mutated",
+            "type": "string",
+            "format": "default",
+            "title": "mutated",
+            "description": "indicates whether the target gene is mutated or not",
+            "rdfType": "",
+            "constraints": {
+                    "enum": ["yes","no"]
+           }
+        
+          },
+          {
+            "name": "Organism",
+            "type": "string",
+            "format": "default",
+            "title": "organism",
+            "description": "The species for that gene",
+             "rdfType": "http://purl.obolibrary.org/obo/OBI_0100026",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Motif",
+            "type": "string",
+            "format": "default",
+            "description": "the sequence motif detected",
+            "title": "Motif",
+            "rdfType": "http://edamontology.org/data_2070",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Len",
+            "type": "integer",
+            "format": "default",
+            "title": "motif length",
+            "description": "the length of the motif detected",
+            "rdfType": "http://edamontology.org/data_1249",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Experiment_description",
+            "type": "string",
+            "format": "default",
+            "title": "experiment type",
+            "description": "indicates the type of experimental techniques used to detect the motif",
+            "rdfType": "http://purl.obolibrary.org/obo/OBI_0000070",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Database",
+            "type": "string",
+            "format": "default",
+            "title": "database",
+            "description": "Database from where the motifs were extracted. One of the following values: [PDB: Protein data bank, C: Cisbp-RNA, R:RBPDB, S: Spliceaid-F, AEDB:ASD)]",
+            "rdfType": "http://edamontology.org/data_1056",
+            "constraints": {
+                    "required": true,
+                    "enum": ["PDB","C","R","S","AEDB"]
+           }
+          },
+          {
+            "name": "Pubmed",
+            "type": "integer",
+            "format": "default",
+            "title": "pubmed identifier",
+            "description": "the pubmed identifier associating a publication to the sequence motif detection.",
+            "rdfType": "http://purl.obolibrary.org/obo/OBI_0001617",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Experiment_description_normalized",
+            "type": "string",
+            "format": "default",
+            "title": "experiment description",
+            "description": "indicates the type of experimental techniques used to detect the motif",
+            "rdfType": "http://purl.obolibrary.org/obo/OBI_0000070",
+            "constraints": {
+                    "required": true,
+                    "enum" : ["EMSA","EMSA;other","EMSA;RNA affinity chromatography/purification","EMSA;UV cross-linking","EMSA;UV cross-linking;other","genome-wide in vivo immunoprecipitation","KH","NMR","other","other;EMSA","other;EMSA;","other;RNA affinity chromatography/purification","other;UV cross-linking","other;UV cross-linking;EMSA","other;UV cross-linking;RNA affinity chromatography/purification","protein affinity purification","RIP-chip","RNA affinity chromatography/purification","RNA affinity chromatography/purification;UV cross-linking","RNAcompete","SELEX","single RNA affinity purification","SOLUTION NMR","SOLUTION NMR;EMSA","UV cross-linking","UV cross-linking;EMSA","UV cross-linking;EMSA;other","UV cross-linking;other","UV cross-linking;RNA affinity chromatography/purification;EMSA","UV cross-linking;SELEX","UV cross-linking;SOLUTION NMR","X-RAY DIFFRACTION","yeast three-hybrid screen"]
+           }
+          },
+          {
+            "name": "Family",
+            "type": "string",
+            "format": "default",
+            "title": "family",
+            "description": "the domain associated to the motif",
+             "rdfType": "",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Matrix_id",
+            "type": "any",
+            "format": "default",
+            "title": "position weight matrix identifier",
+            "description": "the identifier for a matrix result stored in the associated PMW.txt file. The field Matrix_id refers to the pwm id that you can find in the pwm.txt file. The position weight matrices are annotated in fasta format.",
+               "rdfType": "http://edamontology.org/data_1362",
+            "constraints": {
+                    "required": true
+           }
+          },
+          {
+            "name": "Score",
+            "type": "number",
+            "format": "default",
+            "title": "Q-score refer to the paper",
+            "description": "Qscore refer to the paper",
+            "rdfType": "http://edamontology.org/data_1772",
+            "constraints": {
+                    "required": true
+           }
+          }
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    "DNA binding domain"
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "name": "attract_db",
+  "homepage": "https://attract.cnic.es/download",
+  "contributors": [
+    {
+      "title": "philippe rocca-serra",
+      "role": "author"
+    }
+  ],
+  "title": "ATtRACT_db",
+  "description": "The downloaded form of  the ATtRACT database (does not cover the position weight matrix PWM file)"
+}

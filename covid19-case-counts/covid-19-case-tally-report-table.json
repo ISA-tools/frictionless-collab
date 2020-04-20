@@ -1,0 +1,200 @@
+{
+    "profile": "tabular-data-package",
+    "name": "covid-19-case-tally-report-table",
+    "title": "Disease case tracking COVID-19 Data Package",
+    "homepage" : "https://github.com/proccaserra",
+    "version": "1.0",
+    "keywords": [
+        "covid-19",
+        "hospitalization",
+        "WHO",
+        "counts",
+        "statistical summary"
+    ],
+    "licenses": [{
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "CC0_1.0",
+        "version": "1.0",
+        "id": "CC0 1.0"
+    }],
+    "sources": [{
+        "title": "University of Oxford e-Research Centre",
+        "path": "http://oerc.ox.ac.uk"
+    }],
+    "contributors": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "maintainers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "publishers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "resources": [{
+        "name": "covid-19-case-tally-report-table",
+        "title": "covid-19-case-tally-report-table",
+        "encoding":"utf-8",
+        "profile": "tabular-data-resource",
+        "path": "covid-19-case-tally-report-table.csv",
+        "schema": {
+            "fields": [
+                {
+                "name": "lat",
+                "title": "latitude",
+                "description": "the latitude association with the location of the observations",
+                "format": "default",
+                "type": "string",
+                "rdfType": "https://schema.org/GeoCoordinates",
+                "constraints": { "required": true }
+                },
+                                {
+                "name": "lon",
+                "title": "longitude",
+                "description": "the longitude association with the location of the observations",
+                "format": "default",
+                "type": "string",
+                "rdfType": "https://schema.org/GeoCoordinates",
+                "constraints": { "required": true }
+                },            
+                {
+                "name": "country",
+                "title": "country",
+                "description": "the name of the country or nation where the disease (suspected or confirmed) cases are counted. The term should be selected from the ISO 3166-1 specification",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://schema.org/Country",
+                "constraints": { "required": true }
+                },
+            {
+                "name": "region",
+                "title": "region",
+                "description": "a local area defined within the country, a region, a state or a province",
+                "format": "default",
+                "type": "string",
+                "rdfType": "https://schema.org/AdministrativeArea",
+                "constraints": {
+                    "required": true,
+                    "pattern": "\\w+:\\d+"
+                }
+            },
+            {
+                "name": "WHO_region",
+                "title": "WHO region",
+                "description": "geographical region as denoted by the World Health Organization",
+                "format": "default",
+                "type": "string",
+                "rdfType": "https://schema.org/AdministrativeArea",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "hospitalized",
+                "title": "patients hospitalized with symptoms",
+                "description": "the number of subjects arriving at point of care facility, presenting disease symptoms and being hospitalized during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "icu",
+                "title": "patients in intensive care unit",
+                "description": "the number of patients requiring treatment in intensive care units during a defined period of time",
+                "format": "default",
+                "type": "date",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "suspected",
+                "title": "suspected case",
+                "description": "the number of suspected cases where patients are  in self isolation at home during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "cases_total",
+                "title": "cases total",
+                "description": "the total number of cases, corresponding to the sum of suspected, hospitalized and icu cases during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "recovered",
+                "title": "recovered",
+                "description": "the number of hospitalized cases which recovered during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "deaths",
+                "title": "deaths",
+                "description": "the number of deaths recording among the patients treated during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/APOLLO_SV_00000568",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "confirmed",
+                "title": "confirmed cases",
+                "description": "the number of confirmed cases as determined by official diagnostics tests (e.g. RT-PCR, ELISA,...) during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/APOLLO_SV_00000569",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "swab_tested",
+                "title": "swab tested",
+                "description": "the number of patients which have been swabbed for testing during a defined period of time",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "date_period",
+                "title": "date or period",
+                "description": "the date or temporal interval of case observation in ISO8601 format YYYY-MM-DDThh:mm:ssZ",
+                "format": "default",
+                "type": "date",
+                "rdfType": "http://purl.obolibrary.org/obo/APOLLO_SV_00000240",
+                "constraints": {
+                    "required": false
+                }
+            }
+        ]
+        }
+    }],
+    "missingValues": ["","-","NA"]
+}
