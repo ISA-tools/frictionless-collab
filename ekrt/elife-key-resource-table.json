@@ -1,0 +1,132 @@
+{
+    "profile": "tabular-data-resource",
+    "name": "elife-key-resource-table",
+    "title": "elife-key-resource-table",
+    "version": "1.0",
+    "keywords": ["keywords"],
+    "licenses": [
+        {
+            "name": "CC-BY-4.0",
+            "title": "Creative Commons Attribution 4.0",
+            "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+    ],
+    "sources": [
+        {
+            "title": "eLife Key Resource Table",
+            "path": "http://oerc.ox.ac.uk"
+        }
+    ],
+    "contributors": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "maintainers": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "publishers": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "resources": [
+        {
+            "name": "elife-key-resource-table",
+            "title": "elife-key-resource-table",
+            "encoding": "utf-8",
+            "profile": "tabular-data-resource",
+            "path": "elife-key-resource-table.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "reagent type",
+                        "title": "Reagent Type",
+                        "description": "",
+                        "format": "default",
+                        "type": "string",
+                        "enum": [
+                            "Gene",
+                            "Strain, strain background",
+                            "Genetic reagent",
+                            "Cell line",
+                            "Transfected construct",
+                            "Biological sample",
+                            "Antibody",
+                            "Recombinant DNA reagent",
+                            "Sequence-based reagent",
+                            "Peptide, recombinant protein",
+                            "Chemical compound, drug",
+                            "Commercial assay, kit",
+                            "software, algorithm",
+                            "other"
+                        ],
+                        "rdfType": "",
+                        "constraints": {
+                            "required": true,
+                            "pattern": ""
+                        }
+                    },
+                    {
+                        "name": "designation",
+                        "title": "Designation",
+                        "description": "",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "",
+                        "constraints": {
+                            "required": true,
+                            "pattern": ""
+                        }
+                    },
+                    {
+                        "name": "source or reference",
+                        "title": "Source or Reference",
+                        "description": "",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "/[^[doi|pmid]:\\d+/]+"
+                        }
+                    },
+                    {
+                        "name": "identifiers",
+                        "title": "Identifiers",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "",
+                        "constraints": {
+                            "required": true,
+                            "pattern": ""
+                        }
+                    },
+                    {
+                        "name": "additional information",
+                        "type": "string",
+                        "title": "Additional Information",
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "pattern": ""
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "missingValues": [
+        "",
+        "-",
+        "NA"
+    ]
+}

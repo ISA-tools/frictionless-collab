@@ -1,0 +1,3 @@
+﻿response_variable_name,database_identifier,variable_type,variable_class,treatment_contrast,log_ratio,T-statistic,F-statistic,p_value,statistical_test,q_value,correction_method,upper_bound,lower_bound,alpha error
+p53,ensembl:14123525,continous_variable,transcript,group1_vs_group2,1.525,,12455.235,0.00234,two-way anova,0.00194,bonferoni correction,0.1245,0.0843,5%
+propyl 2-methylpropanoate,chebi:89857,continous_variable,metabolite,group1_vs_group2,10.324,,234.34,0.94,,0.89,benjamini-hochberg correction,0.923,0.85,5%

@@ -1,0 +1,170 @@
+{
+    "profile": "tabular-data-package",
+    "name": "differential-analysis-table-definition-proteome",
+    "title": "Reporting Differential Analysis Results Data Package",
+    "homepage": "https://github.com/proccaserra",
+    "version": "1.0",
+    "keywords": [
+        "differential analysis",
+        "treatment",
+        "log ratio",
+        "pvalue",
+        "qvalue",
+        "datascriptor",
+        "statistical summary"
+    ],
+    "licenses": [
+        {
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "name": "CC0_1.0",
+            "version": "1.0",
+            "id": "CC0 1.0"
+        }
+    ],
+    "sources": [
+        {
+            "title": "University of Oxford e-Research Centre",
+            "path": "http://oerc.ox.ac.uk"
+        }
+    ],
+    "contributors": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "maintainers": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "publishers": [
+        {
+            "title": "Philippe Rocca-Serra",
+            "email": "proccaserra@gmail.com",
+            "path": "http://www.stato-ontology.org"
+        }
+    ],
+    "resources": [
+        {
+            "name": "differential-analysis-table-definition",
+            "title": "reporting differential analysis",
+            "encoding": "utf-8",
+            "profile": "tabular-data-resource",
+            "path": "proteome_intensities_long_table_ggplot2.txt",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "response_variable_name",
+                        "title": "response variable name",
+                        "description": "the response variable name is meant to hold a human readable label or common name denoting the entity",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "",
+                        "constraints": {"required": true}
+                    },
+                    {
+                        "name": "database_identifier",
+                        "title": "database identifier",
+                        "description": "an identifier from molecular entity database/ontology",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "(\\w+:\\d+;?)+"
+                        }
+                    },
+                    {
+                        "name": "database_namespace",
+                        "title": "database namespace",
+                        "description": "a shorthand denoting the resource namespace and used to create compact uris, for instance: 'uniprot' or 'chembl'. Obtain the actual official tag from https://FAIRsharing.org",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "\\w+"
+                        }
+                    },
+                    {
+                        "name": "variable_type",
+                        "title": "variable type",
+                        "description": "a descriptor to define whether the response variable reported about is continous,categorical or ordinal",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000265",
+                        "constraints": {
+                            "required": false,
+                            "enum": [
+                                "continuous variable",
+                                "categorical variable",
+                                "ordinal variable"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "variable_class",
+                        "title": "variable class",
+                        "description": "a controlled terminology term to classify the nature of the entity the variable refers to",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_",
+                        "constraints": {
+                            "required": false,
+                            "enum": [
+                                "exon",
+                                "gene",
+                                "transcript",
+                                "protein",
+                                "metabolite",
+                                "phenotype",
+                                "vital sign",
+                                "hematology",
+                                "other"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "treatment",
+                        "title": "treatment",
+                        "description": "a label for describing the treatment the sample or the group of samples received",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000264",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "/\\(\\.*\\)_vs_\\(.*\\)/"
+                        }
+                    },
+                    {
+                        "name": "signal",
+                        "title": "signal",
+                        "description": "the signal intensity recorded for the response variable in the subject,sample or specimen",
+                        "format": "default",
+                        "type": "number",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000109",
+                        "constraints": {"required": false}
+                    },
+                    {
+                        "name": "signal_uri",
+                        "title": "signal_uri",
+                        "description": "the persistent resolveable identifier denoting the type of signal recorded in the table",
+                        "format": "default",
+                        "type": "number",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000105",
+                        "constraints": {"required": false}
+                    }
+                ]
+            }
+        }
+    ],
+    "missingValues": [
+        "",
+        "-",
+        "NA"
+    ]
+}                    

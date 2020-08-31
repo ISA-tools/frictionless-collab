@@ -1,0 +1,209 @@
+{
+    "profile": "tabular-data-package",
+    "name": "t-test-table-definition",
+    "title": "Reporting Differential Analysis Results Data Package",
+    "homepage" : "https://github.com/proccaserra",
+    "version": "1.0",
+    "keywords": [
+        "differential analysis",
+        "treatment",
+        "sample mean",
+        "standard error of the mean",
+        "datascriptor",
+        "statistical summary"
+    ],
+    "licenses": [{
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "CC0_1.0",
+        "version": "1.0",
+        "id": "CC0 1.0"
+    }],
+    "sources": [{
+        "title": "University of Oxford e-Research Centre",
+        "path": "http://oerc.ox.ac.uk"
+    }],
+    "contributors": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "maintainers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "publishers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "resources": [{
+        "name": "t-test-table",
+        "title": "comparison of the means for 2 treatment groups",
+        "encoding":"utf-8",
+        "profile": "tabular-data-resource",
+        "path": "t-test-table.csv",
+        "schema": {
+            "fields": [
+                {
+                "name": "response_variable_name",
+                "title": "response aariable name",
+                "description": "the response aariable name is meant to hold a human readable label or common name denoting the entity",
+                "format": "default",
+                "type": "string",
+                "rdfType": "",
+                "constraints": { "required": true }
+                },
+            {
+                "name": "database_identifier",
+                "title": "database identifier",
+                "description": "an identifier from molecular entity database/ontology",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                "constraints": {
+                    "required": true,
+                    "pattern": "\\w+:\\d+"
+                }
+            },
+            {
+                "name": "variable_type",
+                "title": "variable type",
+                "description": "a descriptor to define whether the response variable reported about is continous,categorical or ordinal",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000265",
+                "constraints": {
+                    "required": false,
+                    "enum": ["continuous variable","categorical variable","ordinal variable"]
+                }
+            },
+            {
+                "name": "variable_class",
+                "title": "variable class",
+                "description": "a controlled terminology term to classify the nature of the entity the variable refers to",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_",
+                "constraints": {
+                    "required": false,
+                    "enum": ["exon","gene","transcript","protein","metabolite","phenotype","vital sign","hematology","other"]
+                }
+            },
+            {
+                "name": "treatment_contrast",
+                "title": "treatment contrast",
+                "description": "a label for describing the treatment groups being compared. The name *must* contain the `_vs_` splitter keyword between the 2 group identifying strings",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000265",
+                "constraints": {
+                    "required": true,
+                    "pattern": "/\\(\\.*\\)_vs_\\(.*\\)/"
+                }
+            },
+            {
+                "name": "log_ratio",
+                "title": "log ratio",
+                "description": "the log transformed value of the ratio of means between the 2 groups",
+                "format": "default",
+                "type": "number",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000105",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "t-statistic",
+                "title": "t statistic",
+                "description": "the value of the t-statistic computer over the means of 2 groups. Only to be used to report One-Factor Design experiments",
+                "format": "default",
+                "type": "number",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000176",
+                "constraints": {
+                    "required": false
+                }
+            },            
+            {
+                "name": "p_value",
+                "title": "p-value",
+                "description": "the value of the  statistical test p-value over the means of 2 groups. To be used to report Factorial Design experiments with one or more Predictor Variables",
+                "format": "default",
+                "type": "number",
+                "rdfType": "http://purl.obolibrary.org/obo/OBI_0000175",
+                "constraints": {
+                    "required": false
+                }
+            }, 
+{
+                "name": "statistical_test",
+                "title": "statistical test",
+                "description": "the name of the statistical test used to produce the raw p-value",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/OBI_0000673",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "q_value",
+                "title": "q-value",
+                "description": "the value of the adjusted p-value, resulting from a multiple testing correction process",
+                "format": "default",
+                "type": "number",
+                "rdfType": "http://purl.obolibrary.org/obo/OBI_0001442",
+                "constraints": {
+                    "required": false
+                }
+            },            
+            {
+                "name": "correction_method",
+                "title": "correction method",
+                "description": "the name of the multiple testing correction method",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/OBI_0200089",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "upper_bound",
+                "title": "upper bound",
+                "description": "the upper limit of the confidence interval",
+                "format": "default",
+                "type": "number",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000314",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "lower_bound",
+                "title": "lower bound",
+                "description": "the lower limit of the confidence interval",
+                "format": "default",
+                "type": "float",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000315",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "significance_level",
+                "title": "significance level",
+                "description": "the sample mean is a measure of dispersion of the observations made on the sample and provides an unbias estimate of the population mean",
+                "format": "default",
+                "type": "string",
+                "rdfType": "http://purl.obolibrary.org/obo/STATO_0000401",
+                "constraints": {"required": false,
+                                    "pattern": "/\\d+\\s%/"
+                }
+            }
+        ]
+        }
+    }]
+    ,
+    "missingValues": ["","-","NA"]
+}

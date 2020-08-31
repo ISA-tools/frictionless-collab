@@ -1,0 +1,22 @@
+﻿lat,lon,country,region,WHO_region,hospitalized,icu,suspected,cases_total ,recovered,deaths,confirmed,swab_tested,date_period
+,,Italy,Lombardia,,1622,309,77,2008,469,135,2612,13556,01.02.2020
+,,Italy,Veneto,,117,27,310,454,22,12,488,13023,01.02.2020
+,,Italy,Emila Romanga,,397,53,366,816,17,37,870,3136,01.02.2020
+,,Italy,Piemonte,,57,30,52,139,,4,143,793,01.02.2020
+,,Italy,Liguria,,12,5,7,24,5,3,32,229,01.02.2020
+,,Italy,Marche ,,73,20,62,155,,4,159,585,01.02.2020
+,,Italy,Toscana,,35,5,38,78,1,,79,1097,01.02.2020
+,,Italy,Sicilia,,7,,15,22,2,,24,367,01.02.2020
+,,Italy,Lazio,,26,8,16,50,3,1,54,1373,01.02.2020
+,,Italy,Campania,,12,,45,57,,,57,471,01.02.2020
+,,Italy,Puglia,,5,1,9,15,1,1,17,395,01.02.2020
+,,Italy,Bolzano,,4,,,4,,,4,36,01.02.2020
+,,Italy,Abruzzo,,9,,,9,,,9,96,01.02.2020
+,,Italy,Calabria,,2,,2,4,,,4,99,01.02.2020
+,,Italy,Sardegna,,2,,3,5,,,5,99,01.02.2020
+,,Italy,Umbria,,2,2,12,16,,,16,110,01.02.2020
+,,Italy,Valle D'Aosta,,,,7,7,,,7,28,01.02.2020
+,,Italy,Friuli V.G.,,4,,24,28,3,,31,577,01.02.2020
+,,Italy,Trento ,,4,,6,10,,,10,122,01.02.2020
+,,Italy,Molise,,3,2,7,12,,,12,104,01.02.2020
+,,Italy,Basilicata,,1,,2,3,,,3,63,01.02.2020

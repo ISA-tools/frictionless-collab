@@ -1,0 +1,30 @@
+﻿Reagent type (species) or resource,Designation,Source or reference,Identifiers,Additional information
+gene (Drosophila melanogaster),nito,NA,FLYB:FBgn0027548,
+gene (D. melanogaster),Sxl,NA,FLYB:FBgn0264270,
+genetic reagent (D. melanogaster),MTD-Gal4,Bloomington Drosophila Stock Center,BDSC:31777; FLYB:FBtp0001612; RRID:BDSC_31777,FlyBase symbol: P{GAL4-nos.NGT}
+genetic reagent (D. melanogaster),ap-Gal4,Bloomington Drosophila Stock Center,BDSC:3041; FLYB:FBti0002785; RRID:BDSC_3041,FlyBase symbol: P{GawB}ap[md544] 
+genetic reagent (D. melanogaster),nub-Gal4,PMID:20798049,FLYB:FBti0016825,FlyBase symbol: P{GawB}nubbin-AC-62
+genetic reagent (D. melanogaster),dome-Gal4,PMID:12403714,FLYB:FBti0022298,FlyBase symbol: P{GawB}dome[PG14]
+genetic reagent (D. melanogaster),UAS-2xEYFP,PMID:12324968,FLYB:FBtp0016537,FlyBase symbol: P{UAS-2xEYFP}
+genetic reagent (D. melanogaster),nito[HP25329],Bloomington Drosophila Stock Center,BDSC:22092; FLYB:FBal0238892; RRID:BDSC_22092,Genotype: w[1118]; P{w[+mC]=EPg}nito[HP25329]/CyO
+genetic reagent (D. melanogaster),nito[1],this paper,,Progenitor = nito[HP25329]; imprecise excision; lethal
+genetic reagent (D. melanogaster),nito shRNA (HMJ02081),Bloomington Drosophila Stock Center,TRiP:HMJ02081; BDSC:56852; RRID:BDSC_56852,FlyBase symbol: P{TRiP.HMJ02081}attP40
+genetic reagent (D. melanogaster),nito dsRNA (VDRC 20942),Vienna Drosophila RNAi Center,VDRC:20942,
+genetic reagent (D. melanogaster),FRT[G13],Bloomington Drosophila Stock Center,BDSC:1956; FLYB:FBti0001247,FlyBase symbol: P{FRT(whs)}G13
+genetic reagent (D. melanogaster),"""y w hsflp; ubiGFP FRT[G13]""",PMID:18160348,,
+cell line (D. melanogaster),S2,other,FLYB:FBtc0000181; RRID:CVCL_Z992,Cell line maintained in N. Perrimon lab; FlyBase symbol: S2-DRSC.
+antibody,anti-Nito,this paper,,Rabbit polyclonal; against aa 479-500; used YZ3137 (1:500)
+antibody,anti-alpha-Spectrin (mouse monoclonal),Developmental Studies Hybridoma Bank,DSHB:3A9; RRID:AB_528473 ,(1:10)
+antibody,anti-Vasa (rabbit polyclonal),Santa Cruz Biotechnology,Santa Cruz:sc-30210; RRID:AB_793874,(1:250)
+antibody,anti-Sxl (mouse monoclonal),Developmental Studies Hybridoma Bank,DSHB:M18; RRID:AB_528464,(1:10)
+antibody,anti-GFP (rabbit polyclonal),Molecular Probes,Molecular Probes:A-6455; RRID:AB_221570,(1:1000)
+antibody,anti-GFP (mouse monoclonal),Molecular Probes,Molecular Probes:A-11120; RRID:AB_221568,(1:200)
+antibody,anti-HA (rat monoclonal),Roche,Roche:3F10; RRID:AB_2314622,
+antibody,Alexa 488- or 555- secondaries,Molecular Probes,,(1:1000)
+other,DAPI stain,Molecular Probes,,(1:1000)
+recombinant DNA reagent,pAGW (Gateway vector),Drosophila Genomics Resource Center,DGRC:1071,
+recombinant DNA reagent,pAHW (Gateway vector),Drosophila Genomics Resource Center,DGRC:1095,
+recombinant DNA reagent,GH11110 (cDNA),Drosophila Genomics Resource Center,DGRC:5666,
+recombinant DNA reagent,GFP-Nito (plasmid),this paper,,Progenitors: GH11110 (cDNA); Gateway vector pAGW
+recombinant DNA reagent,HA-Sxl (plasmid),PMID:16207758,,"Progentiors: PCR, UAS-Sxl flies; Gateway vector pAHW"
+recombinant DNA reagent,GFP-Sxl (plasmid),PMID:16207758,,"Progentiors: PCR, UAS-Sxl flies; Gateway vector pAGW"

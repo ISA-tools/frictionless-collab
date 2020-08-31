@@ -1,0 +1,205 @@
+{
+    "profile": "tabular-data-package",
+    "name": "nhsn-covid-19-patient-module-denominator-table",
+    "title": "NHSN COVID-19 Patient Module Denominator Import File Format Data Package: https://www.cdc.gov/nhsn/pdfs/covid19/import-covid19-data-508.pdf",
+    "homepage" : "https://github.com/ISA-tools/frictionless-collab",
+    "version": "1.0",
+    "keywords": [
+        "covid-19",
+        "hospitalization",
+        "US NHSN CDC",
+        "counts",
+        "statistical summary"
+    ],
+    "licenses": [{
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "CC0_1.0",
+        "version": "1.0",
+        "id": "CC0 1.0"
+    }],
+    "sources": [{
+        "title": "University of Oxford e-Research Centre",
+        "path": "http://oerc.ox.ac.uk"
+    }],
+    "contributors": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "maintainers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "publishers": [{
+        "title": "Philippe Rocca-Serra",
+        "email": "proccaserra@gmail.com",
+        "path": "http://www.stato-ontology.org"
+    }],
+    "resources": [{
+        "name": "nhsn-covid-19-patient-module-denominator-table",
+        "title": "nhsn-covid-19-patient-module-denominator-table",
+        "encoding":"utf-8",
+        "profile": "tabular-data-resource",
+        "path": "nhsn-covid-19-patient-module-denominator-table.csv",
+        "schema": {
+            "fields": [
+                        {
+                "name": "collectionDate",
+                "title": "collection date",
+                "description": "the date of case observation in ISO8601 format YYYY-MM-DDThh:mm:ssZ",
+                "format": "default",
+                "type": "date",
+                "rdfType": "http://schema.org/cvdCollectionDate",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "numTotBeds",
+                "title": "total number of beds",
+                "description": "ALL HOSPITAL BEDS: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow (surge) beds used for inpatients or outpatients",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumTotBeds",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numbeds",
+                "title": "number of inpatient beds",
+                "description": "HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow (surge) beds used for inpatients",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumBeds",
+                "constraints": {
+                    "required": true
+                }
+            },
+            {
+                "name": "numBedsOcc",
+                "title": "number of occupied staffed inpatient beds",
+                "description": "HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumBedsOcc",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numICUBeds",
+                "title": "Total number of staffed inpatient ICU beds",
+                "description": "ICU BEDS: Total number of staffed inpatient intensive care unit (ICU) beds",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumICUBeds",
+                "constraints": {
+                    "required": false
+                }
+            },
+               {
+                "name": "numICUBedsOcc",
+                "title": "Total number of occupied staffed inpatient ICU beds",
+                "description": "ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumICUBedsOcc",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numVent",
+                "title": "Total number of ventilators available",
+                "description": "MECHANICAL VENTILATORS: Total number of ventilators available",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumVent",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numVentUse",
+                "title": "Total number of ventilators in use",
+                "description": "MECHANICAL VENTILATORS IN USE: Total number of ventilators in use",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumVentUse",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numC19HospPats",
+                "title": "patients hospitalized with symptoms",
+                "description": "HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19HospPats",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numC19MechVentPats",
+                "title": "patients hospitalized with symptoms and on a mechanical ventilator",
+                "description": "HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19MechVentPats",
+                "constraints": {
+                    "required": false
+                }
+            },
+             {
+                "name": "numC19HOPats",
+                "title": "patients hospitalized with onset of suspected or confirmed COVID-19",
+                "description": "HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19HOPats",
+                "constraints": {
+                    "required": false
+                }
+            },
+              {
+                "name": "numC19OverflowPats",
+                "title": "patients hospitalized overflow",
+                "description": "ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19OverflowPats",
+                "constraints": {
+                    "required": false
+                }
+            },
+               {
+                "name": "numC19OFMechVentPats",
+                "title": "patients hospitalized overflow on mechanical ventilator",
+                "description": "ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19OFMechVentPats",
+                "constraints": {
+                    "required": false
+                }
+            },
+            {
+                "name": "numC19Died",
+                "title": "number of death",
+                "description": "DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location",
+                "format": "default",
+                "type": "integer",
+                "rdfType": "http://schema.org/cvdNumC19Died",
+                "constraints": {
+                    "required": false
+                }
+            }
+        ]
+        }
+    }],
+    "missingValues": ["","-","NA"]
+}
