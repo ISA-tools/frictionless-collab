@@ -1,0 +1,193 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "neuro-brain-imaging-compare.csv",
+            "profile": "tabular-data-resource",
+            "name": "neuro-brain-imaging-compare",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "contrast",
+                        "title": "treatment contrast",
+                        "description": "a label for describing the treatment groups being compared. The name *must* contain the `_vs_` splitter keyword between the 2 group identifying strings",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000265",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "/\\(\\.*\\)_vs_\\(.*\\)/"
+                        }
+                    },
+                    {
+                        "name": "anatomical region",
+                        "type": "string",
+                        "description": "",
+                        "rdfType": "",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "brain hemisphere",
+                        "type": "string",
+                        "description": "One of two bilateral, largely symmetrical organ subdivisions within the telencephalon which contain the cerebral cortex and cerebral white matter.(http://en.wikipedia.org/wiki/Cerebral_hemisphere)",
+                        "rdfType": "http://purl.obolibrary.org/obo/UBERON_0001869",
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "enum":["right cerebral hemisphere","left cerebral hemisphere"]
+                        }
+                    },
+                    {
+                        "name": "brodmann area",
+                        "type": "string",
+                        "description": "A segmentation of the cerebral cortex on the basis of cytoarchitecture as described in Brodmann-1905, Brodmann-1909 and Brodmann-10. Maps for several species were presented. NeuroNames includes only areas in the human and in Old World monkeys",
+                        "rdfType": "http://purl.obolibrary.org/obo/UBERON_0013529",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI x coordinate",
+                        "type": "integer",
+                        "description": "the x coordinate of the element of interest in the Montreal Neurological Institute (MNI) Brain Atlas coordinate system",
+                        "rdfType": "http://purl.allotrope.org/ontologies/role#AFRL_0000278",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI-x-unit",
+                        "type": "string",
+                        "description": "unit for the x-coordinate",
+                        "rdfType": "http://purl.obolibrary.org/obo/UO_0000000",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI y coordinate",
+                        "type": "integer",
+                        "description": "the y coordinate of the element of interest in the Montreal Neurological Institute (MNI) Brain Atlas coordinate system",
+                        "rdfType": "http://purl.allotrope.org/ontologies/role#AFRL_0000279",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI-y-unit",
+                        "type": "string",
+                        "description": "unit for the y-coordinate",
+                        "rdfType": "http://purl.obolibrary.org/obo/UO_0000000",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI z coordinate",
+                        "type": "integer",
+                        "description": "the z coordinate of the element of interest in the Montreal Neurological Institute (MNI) Brain Atlas coordinate system",
+                        "rdfType": "http://purl.allotrope.org/ontologies/role#AFRL_0000281",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "MNI-z-unit",
+                        "type": "string",
+                        "description": "unit for the z-coordinate",
+                        "rdfType": "http://purl.obolibrary.org/obo/UO_0000000",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "voxel-wise p threshold",
+                        "type": "number",
+                        "description": "The limit at which signal becomes detectable or relevant in the context of voxel-wise inference",
+                        "rdfType": "http://purl.obolibrary.org/obo/PATO_0000152",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "z-score",
+                        "type": "number",
+                        "description": "A z-score (also known as z-value, standard score, or normal score) is a measure of the divergence of an individual experimental result from the most probable result, the mean. Z is expressed in terms of the number of standard deviations from the mean value",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000104",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "cluster size",
+                        "type": "integer",
+                        "description": "an integer which denotes the size of the cluster",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "p value",
+                        "title": "p-value",
+                        "description": "the value of the  statistical test p-value over the means of 2 groups. To be used to report Factorial Design experiments with one or more Predictor Variables",
+                        "format": "default",
+                        "type": "number",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0000175",
+                        "constraints": {
+                            "required": false
+                        }
+                    }, 
+                    {
+                        "name": "statistical test",
+                        "type": "string",
+                        "description": "the name of the statistical test used to produce the raw p-value",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0000673",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "adjusted p-value",
+                        "description": "the value of the adjusted p-value, resulting from a multiple testing correction process",
+                        "format": "default",
+                        "type": "number",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0001442",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "adjustment method",
+                        "title": "correction method",
+                        "description": "the name of the multiple testing correction method",
+                        "format": "default",
+                        "type": "string",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0200089",
+                        "constraints": {
+                            "required": true
+                        }
+                    }
+                ],
+                "missingValues": ["","-","NA"]
+            }
+        }
+    ]
+}

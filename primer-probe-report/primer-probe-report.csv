@@ -1,0 +1,5 @@
+primer name,primer sequence,primer orientation,primer type,primer length,annealing temperature,amplicon size,target gene name,gene identifier,database namespace,target sequence,genomic start coordinate,genomic end coordinate,genome build
+D124124-FWD,AATCCCTTTTGGGTT,5'->3',forward primer,65 degree,15 nc,225 bp,E-cadherin,ENSG00000039068,ensembl,,,,
+D124124-REV,CCTGGTTAATTATTA,5'->3',reverse primer,66 degree,15 nc,225 bp,E-cadherin,ENSG00000039068,ensembl,,,,
+epigen-xyz-FWD,AATCCCTTTTGGGTT,5'->3',forward primer,65 degree,15 nc,225 bp,,,,HEK397,1q1232342345,1q1232342550,hGRF37
+epigen-xyz-REV,CCTGGTTAATTATTA,5'->3',reverse primer,66 degree,15 nc,225 bp,,,,HEK397,1q1232343750,1q12323423950,hGRF37

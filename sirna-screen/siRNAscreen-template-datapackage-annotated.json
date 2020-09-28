@@ -1,0 +1,150 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "siRNAscreen-template.csv",
+            "profile": "tabular-data-resource",
+            "name": "siRNAscreen-template",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8-sig",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "molecular_entity_name",
+                        "type": "string",
+                        "description": "the response variable name is meant to hold a human readable label or common name denoting the entity",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0000751",
+                        "format": "default"
+                    },
+                    {
+                        "name": "library",
+                        "type": "string",
+                        "description": "a screening library is a collection of materials engineered to identify qualities of a subset of its members during a screening process",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0100064",
+                        "format": "default"
+                    },
+                    {
+                        "name": "supplier",
+                        "type": "string",
+                        "description": "the name of the manufacturer or supplier of the library",
+                        "rdfType": "http://purl.obolibrary.org/obo/OBI_0000835",
+                        "format": "default"
+                    },
+                    {
+                        "name": "pool_catalog_number",
+                        "type": "string",
+                        "description": "",
+                        "rdfType": "",
+                        "format": "default"
+                    },
+                    {
+                        "name": "gene_id",
+                        "type": "integer",
+                        "description": "an identifier from molecular entity database/ontology",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database_namespace1",
+                        "type": "string",
+                        "description": "a shorthand denoting the resource namespace and used to create compact uris, for instance: 'uniprot' or 'chembl'. Obtain the actual official tag from https://FAIRsharing.org",
+                        "rdfType": "",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database identifier2",
+                        "type": "string",
+                        "description": "an identifier from molecular entity database/ontology",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database_namespace2",
+                        "type": "string",
+                        "description": "a shorthand denoting the resource namespace and used to create compact uris, for instance: 'uniprot' or 'chembl'. Obtain the actual official tag from https://FAIRsharing.org",
+                        "rdfType": "",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database_identifier3",
+                        "type": "integer",
+                        "description": "an identifier from molecular entity database/ontology",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database_namespace3",
+                        "type": "string",
+                        "description": "a shorthand denoting the resource namespace and used to create compact uris, for instance: 'uniprot' or 'chembl'. Obtain the actual official tag from https://FAIRsharing.org",
+                        "rdfType": "",
+                        "format": "default"
+                    },
+                    {
+                        "name": "average",
+                        "type": "integer",
+                        "description": "the sample mean of sample of size n with n observations is an arithmetic mean computed over n number of observations on a statistical sample.",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000401",
+                        "format": "default"
+                    },
+                    {
+                        "name": "standard_deviation",
+                        "type": "integer",
+                        "description": "The standard deviation of a random variable, statistical population, data set, or probability distribution is a measure of variation which correspond to the average distance from the mean of the data set to any given point of that dataset.",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000237",
+                        "format": "default"
+                    },
+                    {
+                        "name": "group_size",
+                        "type": "integer",
+                        "description": "statistical sample size is a count evaluating the number of individual experimental units in a treatment group",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000088",
+                        "format": "default"
+                    },
+                    {
+                        "name": "hit_score",
+                        "type": "string",
+                        "description": "hit selection is a planned process which in screening processes such as high-throughput screening, lead to the identification of perturbing agent which cause the typical signal generated by a standardized assay to significantly differ from the negative control",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000277",
+                        "format": "default"
+                    },
+                    {
+                        "name": "contrast",
+                        "type": "string",
+                        "description": "the comparison between 2 experimental conditions",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000265",
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "pattern": "/\\(\\.*\\)_vs_\\(.*\\)/"
+                        }
+                    },
+                    {
+                        "name": "timepoint",
+                        "type": "string",
+                        "description": "Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point.",
+                        "rdfType": "http://www.ebi.ac.uk/efo/EFO_0000724",
+                        "format": "default"
+                    },
+                    {
+                        "name": "date",
+                        "type": "string",
+                        "description": "",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000093",
+                        "format": "default"
+                    },
+                    {
+                        "name": "replicate_number",
+                        "type": "integer",
+                        "description": "the number of experimental replication",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ]
+}

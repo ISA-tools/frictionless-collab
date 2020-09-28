@@ -1,0 +1,2 @@
+contrast,anatomical region,brain hemisphere,brodmann area,MNI x coordinate,MNI-x-unit,MNI y coordinate,MNI-y-unit,MNI z coordinate,MNI-z-unit, voxel-wise p threshold,z-score,cluster size,p-value,statistical test,adjusted p-value,adjustment method
+exposure1 vs control,hippocampus,,,12,mm,32,mm,43,mm,0.01,1.14,4,0.00042,F-test,0.00032,benjamini hochberg

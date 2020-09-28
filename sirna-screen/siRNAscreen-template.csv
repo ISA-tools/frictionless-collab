@@ -1,0 +1,2 @@
+﻿molecular_entity_name,library,supplier,pool_catalog_number,database_identifier.1,database_namespace.1,database_identifier.2,database_namespace.2,database_identifier.3,database_namespace.3,average,standard_deviation,group_size,hit_score,contrast,timepoint,date,replicate_number
+Armc5,LP_88951 ,Dharmacon,E-052233-00,233912,ncbigene,NM_146205,refseq,48928021,geninfo,105,10,5,,treated_vs_control,DIV1,03/10/2019,1

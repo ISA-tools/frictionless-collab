@@ -1,0 +1,131 @@
+{
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "primer-probe-report.csv",
+            "profile": "tabular-data-resource",
+            "name": "primer-probe-report",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "primer name",
+                        "type": "string",
+                        "description": "the name or identifier for the primer",
+                        "rdfType": "http://semanticscience.org/resource/SIO_000779",
+                        "format": "default",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "primer sequence",
+                        "type": "string",
+                        "description": "the actual ordered list of nucleotides as their appear in the primer",
+                        "rdfType": "http://edamontology.org/data_3494",
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "pattern":  "/[AGCTN]+/"
+                        }
+                    },
+                    {
+                        "name": "primer orientation",
+                        "type": "string",
+                        "description": "",
+                        "rdfType": "http://purl.obolibrary.org/obo/NCIT_C164875",                     
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "enum":  ["3'->5'","5'->3'","NA"]
+                        }
+                    },
+                    {
+                        "name": "primer type",
+                        "type": "string",
+                        "description": "",
+                        "rdfType": "",                        
+                        "format": "default",
+                        "constraints": {
+                            "required": true,
+                            "enum":  ["forward primer","reverse primer","oligo"]
+                        }
+                    },
+                    {
+                        "name": "primer length",
+                        "type": "integer",
+                        "description": "an integer indicating the number of nucleotides in the primer",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000047",                        
+                        "format": "default"
+                    },
+                    {
+                        "name": "annealing temperature",
+                        "type": "string",
+                        "description": "the temperature at which the primer/DNA will melt/anneal, stated in degrees Celsius",
+                        "rdfType": "http://purl.obolibrary.org/obo/PATO_0000146",
+                        "format": "default"
+                    },
+                    {
+                        "name": "amplicon size",
+                        "type": "string",
+                        "description": "The number of base pairs present in an RNA or DNA sequence, which is the product of an amplification process",
+                        "rdfType": "http://purl.obolibrary.org/obo/NCIT_C132434",                        
+                        "format": "default"
+                    },
+                    {
+                        "name": "target gene name",
+                        "type": "string",
+                        "description": "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. (http://purl.obolibrary.org/obo/OBI_0001962)",
+                        "rdfType": "http://edamontology.org/data_2299",
+                        "format": "default"
+                    },
+                    {
+                        "name": "gene identifier",
+                        "type": "string",
+                        "description": "an identifier from molecular entity database/ontology",
+                        "rdfType": "http://purl.obolibrary.org/obo/IAO_0000577",
+                        "format": "default"
+                    },
+                    {
+                        "name": "database_namespace",
+                        "type": "string",
+                        "description": "a shorthand denoting the resource namespace and used to create compact uris, for instance: 'uniprot' or 'chembl'. Obtain the actual official tag from https://FAIRsharing.org",
+                        "rdfType": "http://semanticscience.org/resource/SIO_000067",
+                        "format": "default"
+                    },
+                    {
+                        "name": "target sequence",
+                        "type": "string",
+                        "description": "the nucleic acid sequence against which the primers have been raised to produce an amplicon",
+                        "rdfType": "http://purl.obolibrary.org/obo/GENO_0000960",
+                        "format": "default"
+                    },
+                    {
+                        "name": "genomic start coordinate",
+                        "type": "string",
+                        "description": "the genomic coordinate corresponding to the first base of the primer",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000063",
+                        "format": "default"
+                    },
+                    {
+                        "name": "genomic end coordinate",
+                        "type": "string",
+                        "description": "the genomic coordinate corresponding to the last base of the primer",
+                        "rdfType": "http://purl.obolibrary.org/obo/STATO_0000063",
+                        "format": "default"
+                    },
+                    {
+                        "name": "genome build",
+                        "type": "string",
+                        "description": "the version number of the genome assembly / build used for setting the coordinate",
+                        "rdfType": "http://edamontology.org/data_2340",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": ["","-","NA"]
+            }
+        }
+    ]
+}
